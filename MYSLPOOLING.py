@@ -24,10 +24,10 @@ try:
 
         # Create a cursor object using the connection
         cursor = connection.cursor()
-        cursor.execute("select database();")
+        cursor.execute("select database();")   
         record = cursor.fetchone()
         print("You're connected to - ", record)
-
+# Handling of errors.
 except Error as e:
     print("Error while connecting to MySQL using Connection pool ", e)
 
